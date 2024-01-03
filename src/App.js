@@ -7,15 +7,17 @@ class App extends Component {
     super();
     this.state = {
       circles: [`🔴`, `🟠`, `🟡`, `🟢`, `🔵`, `🟣`, `⚪️`, `🟤`],
-      squares: [],
-      triangles: [],
+      squares: [`🟥`, `🟧`, `🟨`, `🟩`, `🟦`, `🟪`, `⬜️`, `🟫`],
+      hearts: [`❤️`, `🧡`, `💛`, `💚`, `💙`, `💜`, `🤍`, `🤎`],
     };
   }
   render() {
-    let { circles, squares, triangles } = this.state;
+    let { circles, squares, hearts } = this.state;
     return (
       <div className="App">
         <List listArray={circles} />
+        <List listArray={squares} />
+        <List listArray={hearts} />
       </div>
     );
   }
